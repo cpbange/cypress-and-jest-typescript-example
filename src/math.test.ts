@@ -16,4 +16,12 @@ describe('add function', () => {
   test('adds zero', () => {
     expect(add(0, 5)).toBe(5);
   });
+
+  test('handles large numbers', () => {
+    expect(add(1000000, 2000000)).toBe(3000000);
+  });
+
+  test('handles NaN input', () => {
+    expect(add(NaN, 2)).toBeNaN();
+  });
 });
